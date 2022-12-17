@@ -1,0 +1,171 @@
+$size: 200px;
+
+.container {
+	min-height: 100vh;
+}
+
+.header {
+	margin: 5vh auto !important;
+	width: 85%;
+
+	button {
+		border: none;
+		background-color: transparent;
+		svg {
+			height: 25px;
+			path {
+				fill: #727272;
+			}
+		}
+	}
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.headerInfo {
+		display: flex;
+		align-items: center;
+
+		h3 {
+			color: #303030;
+			font-weight: 500;
+			margin-left: 25px;
+			font-size: 22px;
+		}
+	}
+}
+
+.scale {
+	height: 35vh;
+
+	position: relative;
+}
+.userInfo {
+	& > div {
+		margin: 30px auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 85%;
+		z-index: 10;
+	}
+
+	.gender {
+		& > div {
+			height: 60px;
+			width: 46%;
+			box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 16px;
+
+			&.active {
+				border: 1px solid #c2ff4d;
+			}
+		}
+	}
+}
+
+.ageAndHeight {
+	& > div {
+		width: 46%;
+		padding: 10px;
+		box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+		height: 150px;
+		border-radius: 15px;
+	}
+	.seettings {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 10px;
+
+		p {
+			color: #6d6d6d;
+			font-size: 15px;
+			font-weight: 500;
+		}
+
+		svg {
+			height: 20px;
+			path {
+				fill: #9d9d9d;
+			}
+		}
+	}
+
+	.count {
+		height: 80%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 40px;
+		font-weight: 500;
+	}
+}
+
+.btnContainer {
+	button {
+		width: 85%;
+		margin: 20px auto;
+		padding: 20px;
+		border-radius: 15px;
+		background-color: #7b66ff;
+		color: white;
+		border: none;
+		font-size: 17px;
+	}
+}
+
+.actualScale {
+	border-radius: 25%;
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+.scaleNumber {
+	height: 180px;
+	width: 180px;
+	margin: 0px auto;
+	border-radius: 25px;
+	background-color: #7b66ff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	font-size: 50px;
+	color: white;
+	font-weight: 700;
+	transform: perspective(10px) rotateX(-1deg);
+
+	span {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.clip {
+	height: 30vh;
+	background-color: white;
+	border-radius: 40px 40px 0 0;
+	position: absolute;
+	top: 20%;
+	width: 100%;
+	z-index: -1;
+
+	& > div {
+		height: 40px;
+		width: 100%;
+		position: absolute;
+		border-radius: 40% 40% 0 0;
+		background-color: #fafafa;
+		left: 0;
+		&.clipbuttom {
+			bottom: 0;
+		}
+	}
+}
