@@ -1,0 +1,232 @@
+@import '../../../styles/variables';
+
+.container {
+	min-height: calc(100vh - 100px);
+	margin-bottom: 98px;
+}
+
+.activityHeader {
+	margin-top: 5vh !important;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	h3 {
+		color: #303030;
+		text-transform: capitalize;
+	}
+
+	.imgContainer {
+		height: 50px;
+		width: 50px;
+
+		img {
+			height: 100%;
+			width: 100%;
+			border-radius: 50%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+}
+
+.sliderContainer {
+	height: 15vh;
+	margin: 3vh 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.sliderCard {
+	height: 90%;
+	width: 47%;
+	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+	border-radius: 15px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.iconContainer {
+		text-align: center;
+		width: 30%;
+		svg {
+			height: 25px;
+
+			path {
+				fill: none;
+				stroke: #7b66ff;
+				stroke-width: 20px;
+			}
+		}
+	}
+
+	.infoContainer {
+		width: 70%;
+		h3 {
+			margin: 5px 0;
+			color: #3d3d3d;
+			font-size: 18px;
+			font-weight: 800;
+		}
+		p {
+			color: #b1b1b1;
+			font-size: 14px;
+		}
+	}
+
+	.progressbar {
+		margin: 10px 0;
+		width: 85%;
+		height: 12px;
+		border-radius: 10px;
+		background-color: #f3f1ff;
+		position: relative;
+		& > div {
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			background-color: #c2ff4d;
+			border-radius: 10px;
+		}
+	}
+}
+
+.goals {
+	margin: 5vh 0;
+
+	.goalHeader {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 20px 0;
+		p {
+			color: #a9a9a9;
+		}
+
+		h3 {
+			color: #313131;
+		}
+	}
+}
+
+.sidebar {
+	height: 85%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	font-size: 13px;
+	width: 7%;
+	color: #e4dbfd;
+}
+
+.goalGraph {
+	background-color: #7b66ff;
+	padding: 5px;
+	height: 28vh;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	box-shadow: $box_shadow;
+}
+
+.chartSection {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 10px;
+	width: 90%;
+
+	& > div {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+		height: 25vh;
+
+		& p {
+			width: 25px;
+			background: #bdb3ff;
+			border-radius: 5.875px;
+			border-radius: 25px 25px 10px 10px;
+			&.active {
+				background-color: #c2ff4d;
+			}
+		}
+
+		& span {
+			font-style: normal;
+			font-weight: 300;
+			font-size: 11px;
+			line-height: 9px;
+			letter-spacing: 0.0199303px;
+			color: #e4dbfd;
+			margin-top: 15px;
+
+			@media all and (max-width: 767px) {
+				font-size: 10px;
+			}
+		}
+	}
+}
+
+.trendingWorkouts {
+	margin: 5vh 0;
+
+	.trendingHeader {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		a {
+			color: #adadad;
+			text-decoration: underline;
+		}
+
+		h3 {
+			color: #363636;
+		}
+	}
+
+	.trendingCards {
+		height: 80px;
+		margin: 20px 0;
+		background-color: white;
+		padding: 0 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-radius: 20px;
+		box-shadow: $box_shadow;
+	}
+
+	.playericon {
+		height: 45px;
+		width: 45px;
+		border: 1px solid #c2ff4d;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+
+		svg {
+			height: 20px;
+		}
+	}
+}
+
+.tredningCardsInfo {
+	display: flex;
+	align-items: center;
+	p {
+		margin-left: 10px;
+		color: #424242;
+		font-size: 18px;
+	}
+	svg {
+		height: 20px;
+	}
+}

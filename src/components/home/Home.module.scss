@@ -1,7 +1,7 @@
+@import '../../styles/variables';
 .container {
-	width: 95%;
+	width: 90%;
 	margin: 0px auto;
-	border: 1px solid red;
 }
 
 .footerContainer {
@@ -13,7 +13,7 @@
 	z-index: 1000;
 	background-color: white;
 	border-radius: 50px 50px 0 0;
-	box-shadow: 10px 10px 20px 5px rgba($color: #e2dede, $alpha: 0.8);
+	box-shadow: $box_shadow;
 
 	.addWeight {
 		position: absolute;
@@ -29,8 +29,17 @@
 		background-color: #7b66ff;
 		color: white;
 		font-size: 30px;
-		box-shadow: 10px 10px 20px 10px rgba($color: #e2dede, $alpha: 0.8);
+		box-shadow: $box_shadow;
 		font-weight: 200 !important;
+		svg {
+			height: 30px;
+
+			path {
+				fill: white;
+				stroke: white;
+				stroke-width: 20px;
+			}
+		}
 	}
 
 	ul {
@@ -38,15 +47,22 @@
 		width: 100%;
 		justify-content: space-between;
 		align-items: center;
+		a.active {
+			path {
+				fill: #bdb3ff;
+			}
+		}
 
 		& > div {
 			display: flex;
-			width: 40%;
+			width: 50%;
 			justify-content: space-evenly;
-			margin: 0 10px;
-			i {
-				font-size: 40px;
-				opacity: 0.5;
+			svg {
+				height: 30px;
+
+				path {
+					fill: #cecece;
+				}
 			}
 		}
 	}
