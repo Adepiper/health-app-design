@@ -59,6 +59,7 @@ $size: 200px;
 			align-items: center;
 			justify-content: center;
 			border-radius: 16px;
+			background-color: white;
 
 			&.active {
 				border: 1px solid #c2ff4d;
@@ -74,6 +75,7 @@ $size: 200px;
 		box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 		height: 150px;
 		border-radius: 15px;
+		background-color: white;
 	}
 	.seettings {
 		display: flex;
@@ -110,11 +112,12 @@ $size: 200px;
 		width: 85%;
 		margin: 20px auto;
 		padding: 20px;
-		border-radius: 15px;
+		border-radius: 20px;
 		background-color: #7b66ff;
 		color: white;
 		border: none;
-		font-size: 17px;
+		font-size: 19px;
+		font-weight: 600;
 	}
 }
 
@@ -126,9 +129,9 @@ $size: 200px;
 }
 
 .scaleNumber {
-	height: 180px;
-	width: 180px;
-	margin: 0px auto;
+	height: 150px;
+	width: 150px;
+	margin: 20px auto;
 	border-radius: 25px;
 	background-color: #7b66ff;
 	display: flex;
