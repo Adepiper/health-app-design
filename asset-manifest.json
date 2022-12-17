@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/health-app-design/static/css/main.070455d4.css",
-    "main.js": "/health-app-design/static/js/main.976cdd40.js",
+    "main.css": "/health-app-design/static/css/main.3de30069.css",
+    "main.js": "/health-app-design/static/js/main.bc329d51.js",
     "static/js/787.4f926274.chunk.js": "/health-app-design/static/js/787.4f926274.chunk.js",
     "static/media/PHOTO-2022-08-01-11-41-58 copy.jpg": "/health-app-design/static/media/PHOTO-2022-08-01-11-41-58 copy.266cce98d366691e07c5.jpg",
     "index.html": "/health-app-design/index.html",
-    "main.070455d4.css.map": "/health-app-design/static/css/main.070455d4.css.map",
-    "main.976cdd40.js.map": "/health-app-design/static/js/main.976cdd40.js.map",
+    "main.3de30069.css.map": "/health-app-design/static/css/main.3de30069.css.map",
+    "main.bc329d51.js.map": "/health-app-design/static/js/main.bc329d51.js.map",
     "787.4f926274.chunk.js.map": "/health-app-design/static/js/787.4f926274.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.070455d4.css",
-    "static/js/main.976cdd40.js"
+    "static/css/main.3de30069.css",
+    "static/js/main.bc329d51.js"
   ]
 }
