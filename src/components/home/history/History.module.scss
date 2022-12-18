@@ -1,0 +1,66 @@
+.container {
+	min-height: calc(100vh - 100px);
+	margin-bottom: 98px;
+}
+
+.activityHeader {
+	margin: 4vh 0 !important;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	h3 {
+		color: #303030;
+		text-transform: capitalize;
+		font-size: 26px;
+	}
+
+	svg {
+		height: 30px;
+		path {
+			fill: #a0a0a0;
+		}
+	}
+}
+
+.date {
+	color: #303030;
+	text-transform: capitalize;
+	font-size: 22px;
+}
+
+.box {
+	min-height: 20vh;
+	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+	border-radius: 15px;
+	margin: 40px 0 !important;
+	padding: 20px;
+	background-color: white;
+
+	& > h3 {
+		font-size: 20px;
+		font-weight: 400;
+		padding: 5px 0;
+	}
+}
+
+.weightInfo {
+	height: 16vh;
+	display: flex;
+	align-items: flex-end;
+	& > h2 {
+		width: 30%;
+		font-size: 30px;
+		margin-right: 5px;
+		display: flex;
+		align-items: center;
+
+		span {
+			display: inline;
+			font-size: 14px;
+			margin-top: 7px;
+			color: #a0a0a0;
+		}
+	}
+}
