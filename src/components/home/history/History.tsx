@@ -19,7 +19,7 @@ const History = () => {
 				<h3>Weight</h3>
 				<div className={classes.weightInfo}>
 					<h2>
-						52,3 <span>kg</span>
+						52,3<span>kg</span>
 					</h2>
 					<LineChartGraph />
 				</div>
@@ -76,7 +76,54 @@ const History = () => {
 					</div>
 				</div>
 			</div>
-			<div className={classes.box}></div>
+			<div className={`${classes.box} ${classes.sleep}`}>
+				<div className={classes.sleepInfo}>
+					<h3>Sleep</h3>
+					<h4>
+						6<span>h</span> 20<span>m</span>
+					</h4>
+				</div>
+
+				<div className={classes.chartSection}>
+					<div>
+						<p
+							className={classes.active}
+							style={{ height: '14vh' }}
+						></p>
+						<span>t</span>
+					</div>
+					<div>
+						<p
+							className={classes.active}
+							style={{ height: '11vh' }}
+						></p>
+						<span>w</span>
+					</div>
+					<div>
+						<p style={{ height: '4vh' }}></p>
+						<span>t</span>
+					</div>
+					<div>
+						<p style={{ height: '2vh' }}></p>
+						<span>f</span>
+					</div>
+					<div>
+						<p
+							className={classes.active}
+							style={{ height: '9vh' }}
+						></p>
+						<span>s</span>
+					</div>
+					<div>
+						<p style={{ height: '2vh' }}></p>
+						<span>s</span>
+					</div>
+					<div>
+						<p style={{ height: '3vh' }}></p>
+						<span>m</span>
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 };

@@ -14,6 +14,7 @@
 		color: #303030;
 		text-transform: capitalize;
 		font-size: 26px;
+		font-weight: 600;
 	}
 
 	svg {
@@ -27,7 +28,8 @@
 .date {
 	color: #303030;
 	text-transform: capitalize;
-	font-size: 22px;
+	font-size: 20px;
+	font-weight: 400;
 }
 
 .box {
@@ -41,7 +43,6 @@
 	& > h3 {
 		font-size: 20px;
 		font-weight: 400;
-		padding: 5px 0;
 	}
 }
 
@@ -51,16 +52,13 @@
 	align-items: flex-end;
 	& > h2 {
 		width: 30%;
-		font-size: 30px;
+		font-size: 36px;
 		margin-right: 5px;
-		display: flex;
-		align-items: center;
 
 		span {
-			display: inline;
 			font-size: 14px;
-			margin-top: 7px;
-			color: #a0a0a0;
+
+			font-weight: 300;
 		}
 	}
 }
@@ -180,4 +178,72 @@
 			font-weight: 300;
 		}
 	}
+}
+
+.chartSection {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 10px;
+	width: 90%;
+
+	& > div {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+		height: 15vh;
+
+		& p {
+			width: 10px;
+			background: #cbc2fb;
+			border-radius: 5.875px;
+			border-radius: 25px 25px 10px 10px;
+			&.active {
+				background-color: #7b66fe;
+			}
+		}
+
+		& span {
+			font-style: normal;
+			font-weight: 300;
+			font-size: 11px;
+			line-height: 9px;
+			letter-spacing: 0.0199303px;
+			color: #e4dbfd;
+			margin-top: 15px;
+
+			@media all and (max-width: 767px) {
+				font-size: 10px;
+			}
+		}
+	}
+}
+
+.sleepInfo {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 47%;
+
+	h3 {
+		font-size: 20px;
+		font-weight: 400;
+		padding: 5px 0;
+	}
+
+	h4 {
+		font-weight: 800;
+		font-size: 36px;
+
+		span {
+			font-size: 16px;
+			font-weight: 300;
+			color: #a0a0a0;
+		}
+	}
+}
+
+.sleep {
+	display: flex;
 }
