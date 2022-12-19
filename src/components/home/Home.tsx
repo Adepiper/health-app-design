@@ -1,18 +1,32 @@
-import React from 'react';
-import { Link, Navigate, NavLink, Route, Routes } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import {
+	Link,
+	Navigate,
+	NavLink,
+	Route,
+	Routes,
+	useLocation,
+} from 'react-router-dom';
 import Activity from './activity/Activity';
 import History from './history/History';
 import classes from './Home.module.scss';
 
 const Home = () => {
+	const location = useLocation();
 	return (
-		<div className={classes.container}>
-			<Routes>
+		<motion.div className={classes.container}>
+			<Routes location={location} key={location.pathname}>
 				<Route path={`activity`} element={<Activity />} caseSensitive />
 				<Route path={`history`} element={<History />} caseSensitive />
 				<Route path='*' element={<Navigate to={'activity'} />} />
 			</Routes>
-			<div className={classes.footerContainer}>
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				exit={{ opacity: 0 }}
+				transition={{ ease: 'anticipate', duration: 0.9 }}
+				className={classes.footerContainer}
+			>
 				<ul>
 					<div>
 						<li>
@@ -89,8 +103,8 @@ const Home = () => {
 						<path d='M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z' />
 					</svg>
 				</Link>
-			</div>
-		</div>
+			</motion.div>
+		</motion.div>
 	);
 };
 

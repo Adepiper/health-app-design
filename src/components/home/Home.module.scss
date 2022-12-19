@@ -19,6 +19,7 @@
 		position: absolute;
 		top: -25px;
 		left: 50%;
+		border: none;
 		transform: translateX(-50%);
 		height: 60px;
 		width: 60px;
@@ -31,6 +32,7 @@
 		font-size: 30px;
 		box-shadow: $box_shadow;
 		font-weight: 200 !important;
+
 		svg {
 			height: 25px;
 

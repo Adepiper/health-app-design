@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { assetfiles } from '../../../assets';
 import classes from './Activity.module.scss';
+import { motion } from 'framer-motion';
 
 const Activity = () => {
 	const settings = {
@@ -11,7 +12,13 @@ const Activity = () => {
 		slidesToScroll: 1,
 	};
 	return (
-		<div className={classes.container}>
+		<motion.div
+			initial={{ x: 1000 }}
+			animate={{ x: 0 }}
+			exit={{ x: -1000 }}
+			transition={{ delay: 0.1, ease: 'easeInOut', duration: 0.5 }}
+			className={classes.container}
+		>
 			<div className={classes.activityHeader}>
 				<h3>My Activity</h3>
 
@@ -19,7 +26,17 @@ const Activity = () => {
 					<img src={assetfiles.navPicture} alt='' />
 				</div>
 			</div>
-			<div className={classes.sliderContainer}>
+			<motion.div
+				initial={{ x: 1000 }}
+				animate={{ x: 0 }}
+				exit={{ x: -1000 }}
+				transition={{
+					delay: 0.2,
+					ease: 'easeInOut',
+					duration: 0.58,
+				}}
+				className={classes.sliderContainer}
+			>
 				<div className={classes.sliderCard}>
 					<div className={classes.iconContainer}>
 						<svg
@@ -58,7 +75,7 @@ const Activity = () => {
 						</div>
 					</div>
 				</div>
-			</div>
+			</motion.div>
 
 			<div className={classes.goals}>
 				<div className={classes.goalHeader}>
@@ -66,7 +83,17 @@ const Activity = () => {
 					<p>42 of 54</p>
 				</div>
 
-				<div className={classes.goalGraph}>
+				<motion.div
+					initial={{ x: 1000 }}
+					animate={{ x: 0 }}
+					exit={{ x: -1000 }}
+					transition={{
+						delay: 0.2,
+						ease: 'easeInOut',
+						duration: 0.58,
+					}}
+					className={classes.goalGraph}
+				>
 					<div className={classes.sidebar}>
 						<div>10</div>
 						<div>8</div>
@@ -76,17 +103,17 @@ const Activity = () => {
 					</div>
 					<div className={classes.chartSection}>
 						<div>
-							<p
+							<motion.p
 								className={classes.active}
 								style={{ height: '20vh' }}
-							></p>
+							></motion.p>
 							<span>t</span>
 						</div>
 						<div>
-							<p
+							<motion.p
 								className={classes.active}
 								style={{ height: '18vh' }}
-							></p>
+							></motion.p>
 							<span>w</span>
 						</div>
 						<div>
@@ -113,9 +140,19 @@ const Activity = () => {
 							<span>m</span>
 						</div>
 					</div>
-				</div>
+				</motion.div>
 
-				<div className={classes.trendingWorkouts}>
+				<motion.div
+					initial={{ x: 1000 }}
+					animate={{ x: 0 }}
+					exit={{ x: -1000 }}
+					transition={{
+						delay: 0.2,
+						ease: 'easeInOut',
+						duration: 0.58,
+					}}
+					className={classes.trendingWorkouts}
+				>
 					<div className={classes.trendingHeader}>
 						<h3>Trending Workouts</h3>
 						<Link to={''}>see all</Link>
@@ -147,9 +184,9 @@ const Activity = () => {
 							</svg>
 						</div>
 					</div>
-				</div>
+				</motion.div>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

@@ -1,12 +1,20 @@
-import React from 'react';
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import classes from './Addweight.module.scss';
 
 const Addweight = () => {
+	const navigate = useNavigate();
 	return (
-		<div className={classes.container}>
+		<motion.div
+			initial={{ opacity: 0, y: '100vh' }}
+			animate={{ opacity: 1, y: 0 }}
+			exit={{ opacity: 0, y: '-100vh' }}
+			transition={{ bounce: 200, damping: 3000 }}
+			className={classes.container}
+		>
 			<div className={classes.header}>
 				<div className={classes.headerInfo}>
-					<button>
+					<button onClick={() => navigate('/home/activity')}>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							viewBox='0 0 384 512'
@@ -86,7 +94,7 @@ const Addweight = () => {
 					<button className={classes.save}>Save</button>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

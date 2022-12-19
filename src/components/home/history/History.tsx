@@ -1,10 +1,22 @@
 import React from 'react';
 import classes from './History.module.scss';
 import LineChartGraph from './LineChart';
+import { motion } from 'framer-motion';
 
 const History = () => {
 	return (
-		<div className={classes.container}>
+		<motion.div
+			initial={{ x: 1000 }}
+			animate={{ x: 0 }}
+			exit={{ x: -1000 }}
+			transition={{
+				delay: 0.1,
+				ease: 'easeInOut',
+				delayChildren: 1,
+				duration: 0.5,
+			}}
+			className={classes.container}
+		>
 			<div className={classes.activityHeader}>
 				<h3>History</h3>
 
@@ -13,9 +25,33 @@ const History = () => {
 				</svg>
 			</div>
 
-			<h2 className={classes.date}>Monday, 11 July</h2>
+			<motion.h2
+				initial={{ x: 1000 }}
+				animate={{ x: 0 }}
+				exit={{ x: -1000 }}
+				transition={{
+					delay: 0.15,
+					ease: 'easeInOut',
+					delayChildren: 1,
+					duration: 0.7,
+				}}
+				className={classes.date}
+			>
+				Monday, 11 July
+			</motion.h2>
 
-			<div className={classes.box}>
+			<motion.div
+				initial={{ x: 1000 }}
+				animate={{ x: 0 }}
+				exit={{ x: -1000 }}
+				transition={{
+					delay: 0.18,
+					ease: 'easeInOut',
+					delayChildren: 1,
+					duration: 0.6,
+				}}
+				className={classes.box}
+			>
 				<h3>Weight</h3>
 				<div className={classes.weightInfo}>
 					<h2>
@@ -23,8 +59,19 @@ const History = () => {
 					</h2>
 					<LineChartGraph />
 				</div>
-			</div>
-			<div className={classes.box}>
+			</motion.div>
+
+			<motion.div
+				initial={{ x: 1000 }}
+				animate={{ x: 0 }}
+				exit={{ x: -1000 }}
+				transition={{
+					delay: 0.2,
+					ease: 'easeInOut',
+					duration: 0.58,
+				}}
+				className={classes.box}
+			>
 				<div className={classes.bmiHeader}>
 					<h3>BMI</h3>
 
@@ -75,8 +122,18 @@ const History = () => {
 						<p>high</p>
 					</div>
 				</div>
-			</div>
-			<div className={`${classes.box} ${classes.sleep}`}>
+			</motion.div>
+			<motion.div
+				initial={{ x: 1000 }}
+				animate={{ x: 0 }}
+				exit={{ x: -1000 }}
+				transition={{
+					delay: 0.2,
+					ease: 'easeInOut',
+					duration: 0.58,
+				}}
+				className={`${classes.box} ${classes.sleep}`}
+			>
 				<div className={classes.sleepInfo}>
 					<h3>Sleep</h3>
 					<h4>
@@ -123,8 +180,8 @@ const History = () => {
 						<span>m</span>
 					</div>
 				</div>
-			</div>
-		</div>
+			</motion.div>
+		</motion.div>
 	);
 };
 
