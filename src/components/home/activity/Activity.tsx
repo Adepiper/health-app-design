@@ -4,13 +4,6 @@ import classes from './Activity.module.scss';
 import { motion } from 'framer-motion';
 
 const Activity = () => {
-	const settings = {
-		dots: true,
-		infinite: true,
-		speed: 500,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-	};
 	return (
 		<motion.div
 			initial={{ x: 1000 }}
