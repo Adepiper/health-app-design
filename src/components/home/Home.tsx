@@ -1,21 +1,13 @@
 import { motion } from 'framer-motion';
-import {
-	Link,
-	Navigate,
-	NavLink,
-	Route,
-	Routes,
-	useLocation,
-} from 'react-router-dom';
+import { Link, Navigate, NavLink, Route, Routes } from 'react-router-dom';
 import Activity from './activity/Activity';
 import History from './history/History';
 import classes from './Home.module.scss';
 
 const Home = () => {
-	const location = useLocation();
 	return (
 		<motion.div className={classes.container}>
-			<Routes location={location} key={location.pathname}>
+			<Routes>
 				<Route path={`activity`} element={<Activity />} caseSensitive />
 				<Route path={`history`} element={<History />} caseSensitive />
 				<Route path='*' element={<Navigate to={'activity'} />} />
