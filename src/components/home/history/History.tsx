@@ -1,9 +1,7 @@
-import React from 'react';
-import classes from './History.module.scss';
-import LineChartGraph from './LineChart';
 import { motion } from 'framer-motion';
 import Container from '../container/Container';
-import Footer from '../footer/Footer';
+import classes from './History.module.scss';
+import LineChartGraph from './LineChart';
 
 const History = () => {
 	return (

@@ -1,9 +1,8 @@
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { assetfiles } from '../../../assets';
-import classes from './Activity.module.scss';
-import { motion } from 'framer-motion';
 import Container from '../container/Container';
-import Footer from '../footer/Footer';
+import classes from './Activity.module.scss';
 
 const Activity = () => {
 	return (

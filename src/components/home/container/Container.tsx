@@ -1,7 +1,5 @@
-import React from 'react';
-import classes from './Container.module.scss';
 import { motion } from 'framer-motion';
-import Footer from '../footer/Footer';
+import classes from './Container.module.scss';
 
 const Container = ({ children }: { children: any }) => {
 	return (
